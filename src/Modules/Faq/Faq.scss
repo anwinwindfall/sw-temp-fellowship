@@ -1,0 +1,13 @@
+.faq-block{
+    border-bottom: 1px solid #0000004D;
+    padding: 52px 71px 0px 71px;
+    @media only screen and (max-width: 768px){
+        padding: 15px;
+    }
+}
+.faq-block{
+        &:last-child{
+         border: none;    
+        }
+}
+
