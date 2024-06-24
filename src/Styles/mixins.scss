@@ -1,0 +1,87 @@
+//function to convert pixel to rem for more responsiveness
+@function px-to-rem($pxValue, $baseFontSize: 16px) {
+    @return $pxValue / $baseFontSize * 1rem;
+  }
+  @mixin rem($size, $baseFontSize: 16px, $breakpoints: (
+    small: 576px,
+    medium: 768px,
+    large: 992px,
+    x-large: 1200px
+  )) {
+    font-size: px-to-rem($size, $baseFontSize);
+  
+    @each $breakpoint, $width in $breakpoints {
+      @media (min-width: $width) {
+        font-size: px-to-rem($size, $baseFontSize);
+      }
+    }
+  }
+
+  @mixin breakpoint($name) {
+    @if $name == "sm" {
+      @media (max-width: 576px) { @content; }
+    }
+    @else if $name == "md" {
+      @media (max-width: 768px) { @content; }
+    }
+    @else if $name == "lg" {
+      @media (max-width: 992px) { @content; }
+    }
+    @else if $name == "xl" {
+      @media (max-width: 1200px) { @content; }
+    }
+  }
+  // Function to calculate responsive font size
+  @mixin fluid-type($font-min, $font-max, $screen-min, $screen-max) {
+    font-size: #{$font-min}px;
+  
+    @media only screen and (min-width: #{$screen-min}px) {
+      font-size: calc(
+        #{$font-min}px + #{($font-max - $font-min)} * (100vw - #{$screen-min}px) / (#{$screen-max} - #{$screen-min})
+      );
+    }
+  
+    @media only screen and (min-width: #{$screen-max}px) {
+      font-size: #{$font-max}px;
+    }
+  }
+  
+  // // Function to calculate responsive font size
+  // @mixin responsive-font($min-font-size, $max-font-size, $min-screen-size: 768px, $max-screen-size: 1920px) {
+  //   $base-font-size: 16; // Define your base font size in pixels
+  
+  //   // Convert pixel values to rem units
+  //   $min-font-size-rem: $min-font-size / $base-font-size * 1rem;
+  //   $max-font-size-rem: $max-font-size / $base-font-size * 1rem;
+  
+  //   font-size: $min-font-size-rem;
+  
+  //   @media only screen and (min-width: $min-screen-size) {
+  //     font-size: calc(#{$min-font-size-rem} + (#{$max-font-size-rem} - #{$min-font-size-rem}) * ((100vw - #{$min-screen-size}) / (#{$max-screen-size} - #{$min-screen-size})));
+  //   }
+  
+  //   @media only screen and (min-width: $max-screen-size) {
+  //     font-size: $max-font-size-rem;
+  //   }
+  // }
+
+
+  //Button mixin
+  @mixin btn-style($bg-color, $text-color) {
+    display: inline-block;
+    padding: 10px 52px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: $bg-color;
+    color: $text-color;
+    border: 1px solid $bg-color;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  
+    &:hover {
+      background-color: $text-color;
+      color: $bg-color;
+      border: 1px solid $bg-color;
+    }
+  }

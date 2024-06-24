@@ -1,0 +1,47 @@
+.btn-donate-sw {
+    background-color: #F1C962;
+    border-radius: 4px;
+    padding: 15px 58.5px;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 21.78px;
+    text-align: center;
+    color: #282828;
+}
+
+.donate-button .drop-menu {
+    display: none;
+    position: absolute;
+    top: calc(0% + 73px);
+    right: 1%;
+    background-color: black;
+}
+
+.donate-button:hover .drop-menu {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 4px 4px 10px 0px #00000040;
+    background: #FFFFFF;
+    border-radius: 4px;
+}
+
+.drop-menu li a.drop-item-a {
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16.94px;
+    text-align: left;
+    color: #282828 !important;
+   
+    margin: 0;
+}
+.drop-menu li.drop-menu-item{
+    border-bottom: 0.5px solid #B4A57F;
+    padding: 14px 43px 14px 20px !important;
+}
+.drop-menu li.drop-menu-item:hover{
+    background-color: #F3E8CC;
+    border-radius: 4px;
+}

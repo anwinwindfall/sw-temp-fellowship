@@ -1,0 +1,22 @@
+header{
+    background: #00000099;
+    position: sticky;
+    top: 0;
+    .nav-link{
+        color: #ffffff !important;
+        &.active{
+            color: #B4A57F !important;
+        }
+    }
+}
+ul{
+    li.nav-item{
+        display: flex;;
+        justify-content: center;
+        align-items: center;
+        padding-right: 74px;
+        @media only screen and (max-width: 1400px){
+            padding-right: 17px;
+        }
+    }
+}

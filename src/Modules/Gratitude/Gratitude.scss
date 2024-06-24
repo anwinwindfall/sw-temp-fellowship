@@ -1,0 +1,53 @@
+#gratitude {
+    background: linear-gradient(102.7deg, #097D77 17.05%, #023B40 79.53%),
+        linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+
+    h3 {
+        @include rem(40px);
+        font-weight: 700;
+        line-height: 48px;
+        text-align: center;
+        color: #FFFFFF;
+        @include fluid-type(20, 32, 480, 1500);
+            @media only screen and (max-width: 1024px){
+                line-height: normal !important;
+            }
+    }
+
+    p {
+        @include rem(26px);
+        font-weight: 400;
+        line-height: 36px;
+        text-align: center;
+        color: #FFFFFF;
+        padding-bottom: 125px;
+        max-width: 968px;
+        margin: 0 auto;
+        @include fluid-type(18, 22, 480, 1500);
+            @media only screen and (max-width: 1024px){
+                line-height: normal !important;
+            }
+            @media only screen and (max-width: 768px){
+               padding-bottom: 60px;
+            }
+    }
+
+    h6 {
+        @include rem(18px);
+        font-weight: 600;
+        line-height: 21.78px;
+        letter-spacing: 0.5em;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        li{
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+    }
+}

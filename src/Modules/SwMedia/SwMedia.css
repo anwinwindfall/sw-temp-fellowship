@@ -1,0 +1,49 @@
+#SwMedia {
+  background: url("https://143223961.fs1.hubspotusercontent-eu1.net/hubfs/143223961/raw_assets/public/Assets/SW%20-%20Fellowship/benefits.svg");
+  background-size: cover;
+  width: 100%;
+}
+
+#SwMedia .media-wrapper p {
+  font-family: Inter;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: center;
+  color: #000000CC;
+}
+
+#SwMedia .media-wrapper ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 21.78px;
+  letter-spacing: 0.5em;
+  text-align: center;
+  color: #000000CC;
+}
+
+#SwMedia .media-wrapper ul li {
+  padding-right: 29px;
+}
+
+#SwMedia .media-wrapper ul li:first-child {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  #SwMedia .media-wrapper ul li img {
+    min-width: 23px;
+  }
+}
+/*# sourceMappingURL=SwMedia.css.map */

@@ -1,0 +1,26 @@
+footer {
+  background-color: #2A2A2A;
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: center;
+  color: #FFFFFFB2;
+}
+
+footer .footer-links {
+  text-align: left;
+}
+
+footer .footer-links span {
+  font-family: Inter;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 22.99px;
+  text-align: left;
+}
+
+footer .footer-links span a {
+  color: #FFFFFFB2 !important;
+}
+/*# sourceMappingURL=Footer.css.map */
